@@ -85,5 +85,7 @@ bash scripts/lxmert_eval.sh 0
 ```
 The checkpoint address can be modified in the script.
 
+In [`analysis_scripts/`](https://github.com/cambridgeltl/visual-spatial-reasoning/tree/master/analysis_scripts) you can checkout how to print out by-relation and by-meta-category accuracies.
+
 ### License
 This project is licensed under the [Apache-2.0 License](https://github.com/cambridgeltl/visual-spatial-reasoning/blob/master/LICENSE).
