@@ -4,6 +4,8 @@ Print by-relation performance:
 ```bash
  python eval_compute_acc_by_rel.py ../data/splits/random/test.jsonl ../tmp/lxmert_random_split/best_checkpoint/preds.txt
 ```
+`sys.argv[1]` is the test jsonl file; `sys.argv[2]` points to the model's predictions (can be saved using `--save_preds` during evaluation).
+
 Output (format: relation accuracy relation__frequency):
 ```
 touching	0.6356	236
@@ -19,6 +21,7 @@ Print per meta-category performace:
 ```
 python eval_compute_acc_by_rel_meta_cat.py ../data/splits/random/test.jsonl ../tmp/lxmert_random_split/best_checkpoint/preds.txt rel_meta_category_dict.txt
 ```
+`sys.argv[1]` is the test jsonl file; `sys.argv[2]` points to the model's predictions; `sys.argv[3]` is the meta-category-to-relation dictionary.
 
 Output (format: category accuracy num_relation):
 ```
