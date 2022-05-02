@@ -88,4 +88,4 @@ bash scripts/lxmert_eval.sh 0
 The checkpoint address can be modified in the script.
 
 ### License
-This project is licensed under the Apache-2.0 License.
+This project is licensed under the [Apache-2.0 License](https://github.com/cambridgeltl/visual-spatial-reasoning/blob/master/LICENSE).
