@@ -4,9 +4,9 @@
   <h3 align="center">A probing benchmark for spatial undersranding of vision-language models.</h3>
   
   <p align="center">  
-    <a href="...">arxiv</a>
+    <a href="">arxiv</a>
     ·
-    <a href="...">dataset</a>
+    <a href="https://github.com/cambridgeltl/visual-spatial-reasoning/tree/master/data">dataset</a>
   </p>
 </p>
 
@@ -64,14 +64,12 @@ See `data/` folder's readme.
 Depending on your system configuration and CUDA version, you might need two sets of environment: one environment for feature extraction and one environment for all other experiments. You can install feature extraction environment by running [`feature_extraction/feature_extraction_environment.sh`](https://github.com/cambridgeltl/visual-spatial-reasoning/blob/master/feature_extraction/feature_extraction_environment.sh) (specifically, feature extraction requires detectron2==0.5, CUDA==11.1 and torch==1.8). The default configuration for running other things can be found in [`requirements.txt`](https://github.com/cambridgeltl/visual-spatial-reasoning/blob/master/requirements.txt).
 
 #### Extract visual embeddings
-For VisualBERT and LXMERT, we need to first extract visual embeddings using pre-trained object detectors.
+For VisualBERT and LXMERT, we need to first extract visual embeddings using pre-trained object detectors. This can be done through
 ```bash
-cd feature_extraction/lxmert
-python extract_img_features.py \                                                                                                  
-	--img_folder ../../data/images \
-	--output_folder_path ../../data/lxmert_features/
+bash feature_extraction/lxmert/extract.sh
 ```
-VisualBERT feature extraction is done similarly by `cd` into `feature_extraction/visualbert`. The feature extraction codes are modified from huggingface examples [here](https://colab.research.google.com/drive/1bLGxKdldwqnMVA5x4neY7-l_8fKGWQYI?usp=sharing) (for VisualBERT) and [here](https://colab.research.google.com/drive/18TyuMfZYlgQ_nXo-tr8LCnzUaoX0KS-h?usp=sharing) (for LXMERT).
+
+VisualBERT feature extraction is done similarly by replacing `lxmert` with `visualbert`. The features will be stored under `data/features/{MODEL_NAME}` and automatically loaded when running training and evaluation scripts of LXMERT and VisualBERT. The feature extraction codes are modified from huggingface examples [here](https://colab.research.google.com/drive/1bLGxKdldwqnMVA5x4neY7-l_8fKGWQYI?usp=sharing) (for VisualBERT) and [here](https://colab.research.google.com/drive/18TyuMfZYlgQ_nXo-tr8LCnzUaoX0KS-h?usp=sharing) (for LXMERT).
 
 #### Train
 [`scripts/`](https://github.com/cambridgeltl/visual-spatial-reasoning/tree/master/scripts) contain some example bash scripts for training and evaluations. For example, the following script trains LXMERT on the random split:
