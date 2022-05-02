@@ -35,13 +35,14 @@ For more findings and takeways including zero-shot split performance. check out 
 
 ### 2 The VSR dataset: Splits, statistics, and meta-data
 
-The VSR corpus, after validation, containing 10,119 data points with high agreement. On top of these, we create two splits (1) random split and (2) zero-shot split. (1) randomly splits all data points into train, development, and test sets. (2) makes sure that tran, development and test sets have no overlap of concepts (i.e., if *dog* is in test set, it is not used for training and development). 
-
+The VSR corpus, after validation, containing 10,119 data points with high agreement. On top of these, we create two splits (1) random split and (2) zero-shot split. (1) randomly splits all data points into train, development, and test sets. (2) makes sure that tran, development and test sets have no overlap of concepts (i.e., if *dog* is in test set, it is not used for training and development). Below are some basic statistics of the two splits.
 
 split   |  train | dev | test | total
 :------|:--------:|:--------:|:--------:|:--------:
 random | 7,083 | 1,012 | 2,024 | 10,119 
 zero-shot | 5,440 | 259 | 731 | 6,430
+
+Check out [`data/`](https://github.com/cambridgeltl/visual-spatial-reasoning/tree/master/data) for more details.
 
 ### 3 Baselines: Performance
 
