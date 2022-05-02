@@ -13,12 +13,13 @@ in front of	0.6638	116
 under	0.6429	112
 on top of	0.6322	87
 ...
-	```
+```
 
 Print per meta-category performace:
 ```
 python eval_compute_acc_by_rel_meta_cat.py ../data/splits/random/test.jsonl ../tmp/lxmert_random_split/best_checkpoint/preds.txt rel_meta_category_dict.txt
 ```
+
 Output (format: category accuracy num_relation):
 ```
 Projective	0.6158	773
