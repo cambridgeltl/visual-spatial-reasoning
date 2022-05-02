@@ -4,9 +4,9 @@
   <h3 align="center">A probing benchmark for spatial undersranding of vision-language models.</h3>
   
   <p align="center">  
-    <a href="...">arxiv</a>
+    <a href="">arxiv</a>
     ·
-    <a href="...">dataset</a>
+    <a href="https://github.com/cambridgeltl/visual-spatial-reasoning/tree/master/data">dataset</a>
   </p>
 </p>
 
@@ -35,13 +35,14 @@ For more findings and takeways including zero-shot split performance. check out 
 
 ### 2 The VSR dataset: Splits, statistics, and meta-data
 
-The VSR corpus, after validation, containing 10,119 data points with high agreement. On top of these, we create two splits (1) random split and (2) zero-shot split. (1) randomly splits all data points into train, development, and test sets. (2) makes sure that tran, development and test sets have no overlap of concepts (i.e., if *dog* is in test set, it is not used for training and development). 
-
+The VSR corpus, after validation, containing 10,119 data points with high agreement. On top of these, we create two splits (1) random split and (2) zero-shot split. For random split, we randomly splits all data points into train, development, and test sets. Zero-shot split makes sure that train, development and test sets have no overlap of concepts (i.e., if *dog* is in test set, it is not used for training and development). Below are some basic statistics of the two splits.
 
 split   |  train | dev | test | total
 :------|:--------:|:--------:|:--------:|:--------:
 random | 7,083 | 1,012 | 2,024 | 10,119 
 zero-shot | 5,440 | 259 | 731 | 6,430
+
+Check out [`data/`](https://github.com/cambridgeltl/visual-spatial-reasoning/tree/master/data) for more details.
 
 ### 3 Baselines: Performance
 
@@ -60,47 +61,32 @@ ViLT | 71.0 | 62.4
 #### Download images
 See `data/` folder's readme.
 
+#### Environment
+Depending on your system configuration and CUDA version, you might need two sets of environment: one environment for feature extraction and one environment for all other experiments. You can install feature extraction environment by running [`feature_extraction/feature_extraction_environment.sh`](https://github.com/cambridgeltl/visual-spatial-reasoning/blob/master/feature_extraction/feature_extraction_environment.sh) (specifically, feature extraction requires detectron2==0.5, CUDA==11.1 and torch==1.8). The default configuration for running other things can be found in [`requirements.txt`](https://github.com/cambridgeltl/visual-spatial-reasoning/blob/master/requirements.txt).
+
 #### Extract visual embeddings
-For VisualBERT and LXMERT, we need to first extract visual embeddings using pre-trained object detectors.
+For VisualBERT and LXMERT, we need to first extract visual embeddings using pre-trained object detectors. This can be done through
 ```bash
-cd feature_extraction/lxmert
-python extract_img_features.py \                                                                                                  
-	--img_folder ../../data/images \
-	--output_folder_path ../../data/lxmert_features/
+bash feature_extraction/lxmert/extract.sh
 ```
-VisualBERT feature extraction is done similarly by `cd` into `feature_extraction/visualbert`. The feature extraction codes are modified from huggingface examples [here](https://colab.research.google.com/drive/1bLGxKdldwqnMVA5x4neY7-l_8fKGWQYI?usp=sharing) (for VisualBERT) and [here](https://colab.research.google.com/drive/18TyuMfZYlgQ_nXo-tr8LCnzUaoX0KS-h?usp=sharing) (for LXMERT).
+
+VisualBERT feature extraction is done similarly by replacing `lxmert` with `visualbert`. The features will be stored under `data/features/{MODEL_NAME}` and automatically loaded when running training and evaluation scripts of LXMERT and VisualBERT. The feature extraction codes are modified from huggingface examples [here](https://colab.research.google.com/drive/1bLGxKdldwqnMVA5x4neY7-l_8fKGWQYI?usp=sharing) (for VisualBERT) and [here](https://colab.research.google.com/drive/18TyuMfZYlgQ_nXo-tr8LCnzUaoX0KS-h?usp=sharing) (for LXMERT).
 
 #### Train
-
-VisualBERT:
+[`scripts/`](https://github.com/cambridgeltl/visual-spatial-reasoning/tree/master/scripts) contain some example bash scripts for training and evaluations. For example, the following script trains LXMERT on the random split:
 ```bash
-CUDA_VISIBLE_DEVICES=2 python train.py \      
-		--img_feature_path data/vsr_data_trial/img_features \
-		--train_json_path data/vsr_data_trial/test.json \
-		--amp \
-		--output_dir "tmp/test" \
-		--checkpoint_step 10 \
-		--epoch 100 \
-		--batch_size 32 \
-		--learning_rate 2e-5
+bash scripts/lxmert_train.sh 0
 ```
-LXMERT:
-
-```
-```
-
-ViLT:
-```
-```
-
+where `0` denotes device index. Checkpoint saving address can be modified in the script.
 
 #### Evaluation
+Similarly, evaluating the obtained LXMERT model can be done by running:
 ```bash
-CUDA_VISIBLE_DEVICES=2 python eval.py \ 
-		--checkpoint_path tmp/test/checkpoint_iter_140 \
-		--img_feature_path data/vsr_data_trial/img_features \
-		--test_json_path data/vsr_data_trial/test.json
+bash scripts/lxmert_eval.sh 0
 ```
+The checkpoint address can be modified in the script.
+
+In [`analysis_scripts/`](https://github.com/cambridgeltl/visual-spatial-reasoning/tree/master/analysis_scripts) you can checkout how to print out by-relation and by-meta-category accuracies.
 
 ### License
-This project is licensed under the Apache-2.0 License.
+This project is licensed under the [Apache-2.0 License](https://github.com/cambridgeltl/visual-spatial-reasoning/blob/master/LICENSE).

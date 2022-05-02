@@ -1,10 +1,13 @@
+# Analysis scripts
+Using these scripts you can print by-relation and by-meta-category performances of the models.
 
-
-Print by-relation performance:
+**Print by-relation performance:**
 ```bash
  python eval_compute_acc_by_rel.py ../data/splits/random/test.jsonl ../tmp/lxmert_random_split/best_checkpoint/preds.txt
 ```
-Output (format: relation accuracy relation__frequency):
+`sys.argv[1]` is the test jsonl file; `sys.argv[2]` points to the model's predictions (can be saved using `--save_preds` during evaluation).
+
+Output (format: `f"{relation}\t{accuracy}\t{frequency}"`):
 ```
 touching	0.6356	236
 behind	0.5956	136
@@ -13,13 +16,15 @@ in front of	0.6638	116
 under	0.6429	112
 on top of	0.6322	87
 ...
-	```
+```
 
-Print per meta-category performace:
+**Print per meta-category performace:**
 ```
 python eval_compute_acc_by_rel_meta_cat.py ../data/splits/random/test.jsonl ../tmp/lxmert_random_split/best_checkpoint/preds.txt rel_meta_category_dict.txt
 ```
-Output (format: category accuracy num_relation):
+`sys.argv[1]` is the test jsonl file; `sys.argv[2]` points to the model's predictions; `sys.argv[3]` is the meta-category-to-relation dictionary.
+
+Output (format: `f"{category}\t{accuracy}\t{frequency}"`):
 ```
 Projective	0.6158	773
 Topological	0.6108	591
