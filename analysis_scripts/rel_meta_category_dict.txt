@@ -1,0 +1,7 @@
+Adjacency: adjacent to, alongside, at the side of, at the right side of, at the left side of, attached to, at the back of, ahead of, against, at the edge of
+Directional: off, past, toward, down, deep down, up, away from, along, around, from, into, to, across, across from, through, down from 
+Orientation: facing, facing away from, parallel to, perpendicular to
+Projective: on top of, beneath, beside, behind, left of, right of, under, in front of, below, above, over, in the middle of
+Proximity: by, close to, near, far from, far away from 
+Topological: connected to, detached from, has as a part, part of, contains, within, at, on, in, with, surrounding, among, consists of, out of, between, inside, outside, touching
+Unallocated: beyond, next to, opposite to, after, among, enclosed by 

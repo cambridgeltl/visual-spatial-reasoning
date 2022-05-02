@@ -1,0 +1,7 @@
+data/images/*
+data/features/*
+tmp/
+logs/
+wandb/
+__pycache__
+.ipython_checkpoints/
