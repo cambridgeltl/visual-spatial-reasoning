@@ -70,7 +70,7 @@ For VisualBERT and LXMERT, we need to first extract visual embeddings using pre-
 bash feature_extraction/lxmert/extract.sh
 ```
 
-VisualBERT feature extraction is done similarly by replacing `lxmert` with `visualbert`. The features will be stored under `data/features/{MODEL_NAME}` and automatically loaded when running training and evaluation scripts of LXMERT and VisualBERT. The feature extraction codes are modified from huggingface examples [here](https://colab.research.google.com/drive/1bLGxKdldwqnMVA5x4neY7-l_8fKGWQYI?usp=sharing) (for VisualBERT) and [here](https://colab.research.google.com/drive/18TyuMfZYlgQ_nXo-tr8LCnzUaoX0KS-h?usp=sharing) (for LXMERT).
+VisualBERT feature extraction is done similarly by replacing `lxmert` with `visualbert`. The features will be stored under [`data/features/`](https://github.com/cambridgeltl/visual-spatial-reasoning/tree/master/data/features) and automatically loaded when running training and evaluation scripts of LXMERT and VisualBERT. The feature extraction codes are modified from huggingface examples [here](https://colab.research.google.com/drive/1bLGxKdldwqnMVA5x4neY7-l_8fKGWQYI?usp=sharing) (for VisualBERT) and [here](https://colab.research.google.com/drive/18TyuMfZYlgQ_nXo-tr8LCnzUaoX0KS-h?usp=sharing) (for LXMERT).
 
 #### Train
 [`scripts/`](https://github.com/cambridgeltl/visual-spatial-reasoning/tree/master/scripts) contain some example bash scripts for training and evaluations. For example, the following script trains LXMERT on the random split:
