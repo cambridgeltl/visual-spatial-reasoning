@@ -74,7 +74,7 @@ python extract_img_features.py \
 VisualBERT feature extraction is done similarly by `cd` into `feature_extraction/visualbert`. The feature extraction codes are modified from huggingface examples [here](https://colab.research.google.com/drive/1bLGxKdldwqnMVA5x4neY7-l_8fKGWQYI?usp=sharing) (for VisualBERT) and [here](https://colab.research.google.com/drive/18TyuMfZYlgQ_nXo-tr8LCnzUaoX0KS-h?usp=sharing) (for LXMERT).
 
 #### Train
-`scripts/` contain some example bash scripts for training and evaluations. For example, the following script trains LXMERT on the random split:
+[`scripts/`](https://github.com/cambridgeltl/visual-spatial-reasoning/tree/master/scripts) contain some example bash scripts for training and evaluations. For example, the following script trains LXMERT on the random split:
 ```bash
 bash scripts/lxmert_train.sh 0
 ```
