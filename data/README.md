@@ -12,6 +12,7 @@ mv train2017 trainval2017 && mv val2017/* trainval2017 && rm -r val2017
 ```
 Copy only relevant images to `images/`.
 ```
+mkdir images
 python select_only_revlevant_images.py data_files/all_vsr_validated_data.jsonl/  trainval2017/ images/
 ```
 
