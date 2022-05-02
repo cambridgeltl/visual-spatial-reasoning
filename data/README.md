@@ -19,6 +19,22 @@ python select_only_revlevant_images.py data_files/all_vsr_validated_data.jsonl/ 
 Alternatively, you could also download the used images from dropbox [here](https://www.dropbox.com/s/0s3bj25s62crjh2/vsr_images.zip?dl=0) and put them under the `images/` folder.
 
 ### Splits
+An overview of the [`splits/`](https://github.com/cambridgeltl/visual-spatial-reasoning/tree/master/data/splits) folder:
+```
+splits
+├── create_random_splits.py
+├── create_sample_efficiency_train_splits.py
+├── create_zeroshot_splits.py
+├── random
+│   ├── dev.jsonl
+│   ├── test.jsonl
+│   └── train.jsonl
+└── zeroshot
+    ├── dev.jsonl
+    ├── test.jsonl
+    └── train.jsonl
+```
+
 [`splits/random`](https://github.com/cambridgeltl/visual-spatial-reasoning/tree/master/data/splits/random) and [`splits/zeroshot`](https://github.com/cambridgeltl/visual-spatial-reasoning/tree/master/data/splits/zeroshot) contain the train and zeroshot splits data in `jsonl` format. [`splits/create_random_splits.py`](https://github.com/cambridgeltl/visual-spatial-reasoning/tree/master/data/splits/create_random_splits.py) and [`splits/create_zeroshot_splits.py`](https://github.com/cambridgeltl/visual-spatial-reasoning/tree/master/data/splits/create_zeroshot_splits.py) are the scripts used to create them. [`splits/create_sample_efficiency_train_splits.py`](https://github.com/cambridgeltl/visual-spatial-reasoning/tree/master/data/splits/create_sample_efficiency_train_splits.py) is for creating sample efficiency training files (100-shot, 10\%, 25\%, 50\%, 75\% of all training data). Read the code and you will see that they are quite self-explanatory.
 
 ### Format of the data
