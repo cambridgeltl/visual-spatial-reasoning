@@ -7,7 +7,7 @@ Using these scripts you can print by-relation and by-meta-category performances 
 ```
 `sys.argv[1]` is the test jsonl file; `sys.argv[2]` points to the model's predictions (can be saved using `--save_preds` during evaluation).
 
-Output (format: relation accuracy frequency):
+Output (format: `f"{relation}\t{accuracy}\t{frequency}"`):
 ```
 touching	0.6356	236
 behind	0.5956	136
@@ -24,7 +24,7 @@ python eval_compute_acc_by_rel_meta_cat.py ../data/splits/random/test.jsonl ../t
 ```
 `sys.argv[1]` is the test jsonl file; `sys.argv[2]` points to the model's predictions; `sys.argv[3]` is the meta-category-to-relation dictionary.
 
-Output (format: category accuracy frequency):
+Output (format: `f"{category}\t{accuracy}\t{frequency}"`):
 ```
 Projective	0.6158	773
 Topological	0.6108	591
