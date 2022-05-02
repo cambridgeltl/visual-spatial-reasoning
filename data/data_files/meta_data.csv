@@ -1,0 +1,48 @@
+id,participant_id,age,num_approvals,num_rejections,prolific_score,Country of Birth,Current Country of Residence,Employment Status,First Language,Highest education level completed,Nationality,Sex,Student Status
+1,,26,,,,China,United Kingdom,Student,Chinese,Graduate degree (MA/MSc/MPhil/other),China,Male,Yes
+2,,52,,,,China,China,full-time,Chinese,Graduate degree (MA/MSc/MPhil/other),China,Female,No
+3,,26,,,,China,Finland,Student,Chinese,Graduate degree (MA/MSc/MPhil/other),China,Male,Yes
+4,,29,,,,China,United Kingdom,full-time,Chinese,Doctorate degree (PhD/other),China,Female,No
+5,,30,,,,Sigapore,United Kingdom,full-time,English,Doctorate degree (PhD/other),United Kingdom,Male,No
+6,614b212257e37ee820db3736,36,168,0,100,Ireland,Ireland,Part-Time,English,Graduate degree (MA/MSc/MPhil/other),Ireland,Female,No
+7,601a788b7ab49028cd7a4ad4,49,219,1,100,United Kingdom,Spain,Other,English,Doctorate degree (PhD/other),United Kingdom,Female,No
+8,6055b86f3fc8b9037011c319,34,248,2,100,United Kingdom,United Kingdom,Part-Time,English,Doctorate degree (PhD/other),United Kingdom,Female,No
+9,60c6fdf79ece6416c491ea7e,25,103,0,100,South Africa,South Africa,Other,English,Graduate degree (MA/MSc/MPhil/other),South Africa,Female,Yes
+10,613f2fddaba8ab6b7099670d,33,94,1,100,Ireland,Ireland,Full-Time,English,Graduate degree (MA/MSc/MPhil/other),Ireland,Female,Yes
+11,5eadb1668c05c509d8989288,28,277,1,100,India,United States,DATA EXPIRED,English,Doctorate degree (PhD/other),India,Male,DATA EXPIRED
+12,60be1314c97894c00495567e,39,142,0,100,South Africa,South Africa,Full-Time,English,Graduate degree (MA/MSc/MPhil/other),South Africa,Female,No
+13,61546cae5a448e00217070a1,49,164,0,100,Canada,Canada,DATA EXPIRED,English,Graduate degree (MA/MSc/MPhil/other),Canada,Female,No
+14,579fb449275be6000135b03e,30,488,4,99,United Kingdom,United Kingdom,Full-Time,English,Graduate degree (MA/MSc/MPhil/other),United Kingdom,Female,No
+15,5c7d15e96b5631001745907a,43,342,1,100,United Kingdom,United Kingdom,Part-Time,English,Graduate degree (MA/MSc/MPhil/other),United Kingdom,Male,No
+16,5f69d6a0d7690f0008ae9fde,23,452,2,100,United States,Poland,Unemployed (and job seeking),English,Graduate degree (MA/MSc/MPhil/other),United States,Male,No
+17,5cbee08db4b8d300019a4227,54,877,0,100,United Kingdom,United Kingdom,Full-Time,English,Graduate degree (MA/MSc/MPhil/other),United Kingdom,Female,No
+18,60ba11d834e9dfc2fdd3ab51,31,46,0,100,United Kingdom,United Kingdom,DATA EXPIRED,English,Graduate degree (MA/MSc/MPhil/other),United Kingdom,Male,DATA EXPIRED
+19,60c6fdf79ece6416c491ea7e,25,103,0,100,South Africa,South Africa,Other,English,Graduate degree (MA/MSc/MPhil/other),South Africa,Female,Yes
+20,60e580ac2b617df6311e8462,58,438,2,100,United Kingdom,United Kingdom,Full-Time,English,Graduate degree (MA/MSc/MPhil/other),United Kingdom,Male,No
+21,5e46ae8fe940451815479be8,31,49,1,100,Ireland,Ireland,Part-Time,English,Graduate degree (MA/MSc/MPhil/other),Ireland,Male,No
+22,617406fbfced12169896d158,57,313,0,100,United Kingdom,United Kingdom,"Not in paid work (e.g. homemaker', 'retired or disabled)",English,Graduate degree (MA/MSc/MPhil/other),United Kingdom,Female,No
+23,5fc452df39c5f23dd403a57e,31,188,2,100,Saudi Arabia,Japan,Full-Time,English,Graduate degree (MA/MSc/MPhil/other),Egypt,Male,No
+24,5dfedeef1d6b46b5855d65fb,42,144,1,100,Canada,Canada,Full-Time,English,Graduate degree (MA/MSc/MPhil/other),Canada,Male,No
+25,6096ace01e65b3225e84d29f,44,41,0,100,Cook Islands,New Zealand,Full-Time,English,Graduate degree (MA/MSc/MPhil/other),New Zealand,Female,No
+26,610efcc03d98d4caad608538,24,101,0,100,United States,United States,DATA EXPIRED,English,Graduate degree (MA/MSc/MPhil/other),United States,Female,DATA EXPIRED
+27,615f338fdbb7744db42e0f7f,29,311,1,100,United Kingdom,United Kingdom,Part-Time,English,DATA EXPIRED,United Kingdom,Male,No
+28,60945971fe4f09a50ff0d3f9,22,86,0,100,South Africa,South Africa,DATA EXPIRED,English,Graduate degree (MA/MSc/MPhil/other),South Africa,Female,DATA EXPIRED
+29,60e02942c13f8d4be69bef6f,26,91,1,100,United Kingdom,United Kingdom,Part-Time,English,Graduate degree (MA/MSc/MPhil/other),United Kingdom,Female,Yes
+30,56ebadebcdfa81000d9e2b67,32,1228,9,99,Canada,Canada,Full-Time,English,DATA EXPIRED,Canada,Female,No
+31,5dea6cdd245a4617ff0cba9e,35,248,0,100,United Kingdom,United Kingdom,Unemployed (and job seeking),English,Graduate degree (MA/MSc/MPhil/other),United Kingdom,Male,No
+32,613f9cbb77b9b76e7f22f79c,36,92,1,99,United Kingdom,United Kingdom,DATA EXPIRED,English,Graduate degree (MA/MSc/MPhil/other),United Kingdom,Female,DATA EXPIRED
+33,609b65565239fb092894f299,25,87,0,100,Chile,Chile,Full-Time,English,Graduate degree (MA/MSc/MPhil/other),Chile,Male,Yes
+34,613bad7c952014d0d5848b31,24,118,2,99,United States,Japan,DATA EXPIRED,English,Undergraduate degree (BA/BSc/other),United States,Male,DATA EXPIRED
+35,5e3afe879d5f1e30b75b9ca6,27,554,3,100,United Kingdom,United Kingdom,DATA EXPIRED,English,Undergraduate degree (BA/BSc/other),United Kingdom,Male,DATA EXPIRED
+36,60426ee0eea59612c23d9dea,23,168,0,100,Hungary,Hungary,Part-Time,English,Graduate degree (MA/MSc/MPhil/other),Hungary,Male,Yes
+37,607efc8235abfb9a195cf3c1,30,121,1,100,South Africa,South Africa,Part-Time,English,Undergraduate degree (BA/BSc/other),South Africa,Female,No
+38,6066d08253019ea549b1dd37,34,351,1,100,United Kingdom,United Kingdom,Full-Time,English,Graduate degree (MA/MSc/MPhil/other),United Kingdom,Female,No
+39,603e586528b8f0e977b61778,22,81,0,100,Ireland,Ireland,Unemployed (and job seeking),English,DATA EXPIRED,Ireland,Female,No
+40,6147539b00c6232dc29b5f4e,26,182,1,100,United Kingdom,United Kingdom,Full-Time,English,Graduate degree (MA/MSc/MPhil/other),United Kingdom,Female,Yes
+41,60772f932c4856e0daf1944b,41,120,1,100,South Africa,South Africa,DATA EXPIRED,English,Undergraduate degree (BA/BSc/other),South Africa,Male,Yes
+42,60baaa0728fc4d8ac2337344,23,137,1,100,South Africa,South Africa,Full-Time,English,Undergraduate degree (BA/BSc/other),South Africa,Female,Yes
+43,616cc99a2f1e264e7f05e9d7,36,96,0,100,Canada,Canada,Part-Time,English,Doctorate degree (PhD/other),Canada,Female,No
+44,5efcbb97df2a840990b0da94,26,418,0,100,Poland,United Kingdom,Unemployed (and job seeking),English,Graduate degree (MA/MSc/MPhil/other),Poland,Male,DATA EXPIRED
+45,61f2ae2ea09e72f23cbafa52,44,35,1,99,United Kingdom,United Kingdom,Full-Time,English,Undergraduate degree (BA/BSc/other),United Kingdom,Male,No
+46,609b0a9e0f904799bec4c636,23,13,0,100,South Africa,South Africa,Due to start a new job within the next month,English,Undergraduate degree (BA/BSc/other),South Africa,Female,Yes
+47,606cf66b71eab7400ea24825,30,44,2,97,Canada,Canada,Full-Time,English,Graduate degree (MA/MSc/MPhil/other),Canada,Female,DATA EXPIRED
