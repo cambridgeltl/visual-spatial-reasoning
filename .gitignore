@@ -1,5 +1,6 @@
 data/images/*
 data/features/*
+!data/features/README.md
 tmp/
 logs/
 wandb/
