@@ -24,10 +24,10 @@ The VSR corpus focuses specifically on spatial relations so we can have accurate
 
 #### 1.2 What have we found?
 Below are baselines' by-relation performances on VSR (random split). 
-![](data_annotation/performance_by_relation_random_split_v2.png)
+![](figures/performance_by_relation_random_split_v2.png)
 **_More data != better performance._** The relations are sorted by frequencies from left to right. The VLMs' by-relation performances have little correlation with relation frequency, meaning that more training data do not necessarily lead to better performance.
 
-<img align="right" width="320"  src="data_annotation/performance_by_meta_cat_random_split_v2.png"> 
+<img align="right" width="320"  src="figures/performance_by_meta_cat_random_split_v2.png"> 
 
 **_Understanding object orientation is hard._** After classifying spatial relations with meta-categories, we can clearly see that all models are at chance level for "orientation"-related relations (such as "facing", "facing away from", "parallel to", etc.).
 
