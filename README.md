@@ -60,6 +60,9 @@ ViLT | 71.0 | 62.4
 #### Download images
 See `data/` folder's readme.
 
+#### Environment
+Depending on your system configuration and CUDA version, you might need two sets of environment: one environment for feature extraction and one environment for all other experiments. You can install feature extraction environment by running [`feature_extraction/feature_extraction_environment.sh`](https://github.com/cambridgeltl/visual-spatial-reasoning/blob/master/feature_extraction/feature_extraction_environment.sh) (specifically, feature extraction requires detectron2==0.5, CUDA==11.1 and torch==1.8). The default configuration for running other things can be found in [`requirements.txt`](https://github.com/cambridgeltl/visual-spatial-reasoning/blob/master/requirements.txt).
+
 #### Extract visual embeddings
 For VisualBERT and LXMERT, we need to first extract visual embeddings using pre-trained object detectors.
 ```bash
