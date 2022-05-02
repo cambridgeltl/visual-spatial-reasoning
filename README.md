@@ -73,18 +73,18 @@ bash feature_extraction/lxmert/extract.sh
 VisualBERT feature extraction is done similarly by replacing `lxmert` with `visualbert`. The features will be stored under [`data/features/`](https://github.com/cambridgeltl/visual-spatial-reasoning/tree/master/data/features) and automatically loaded when running training and evaluation scripts of LXMERT and VisualBERT. The feature extraction codes are modified from huggingface examples [here](https://colab.research.google.com/drive/1bLGxKdldwqnMVA5x4neY7-l_8fKGWQYI?usp=sharing) (for VisualBERT) and [here](https://colab.research.google.com/drive/18TyuMfZYlgQ_nXo-tr8LCnzUaoX0KS-h?usp=sharing) (for LXMERT).
 
 #### Train
-[`scripts/`](https://github.com/cambridgeltl/visual-spatial-reasoning/tree/master/scripts) contain some example bash scripts for training and evaluations. For example, the following script trains LXMERT on the random split:
+[`scripts/`](https://github.com/cambridgeltl/visual-spatial-reasoning/tree/master/scripts) contain some example bash scripts for training and evaluation. For example, the following script trains LXMERT on the random split:
 ```bash
 bash scripts/lxmert_train.sh 0
 ```
-where `0` denotes device index. Checkpoint saving address can be modified in the script.
+where `0` denotes device index. Configurations such as checkpoint saving address can be modified in the script.
 
 #### Evaluation
 Similarly, evaluating the obtained LXMERT model can be done by running:
 ```bash
 bash scripts/lxmert_eval.sh 0
 ```
-The checkpoint address can be modified in the script.
+Configurations such as checkpoint reading address can be modified in the script.
 
 In [`analysis_scripts/`](https://github.com/cambridgeltl/visual-spatial-reasoning/tree/master/analysis_scripts) you can checkout how to print out by-relation and by-meta-category accuracies.
 
