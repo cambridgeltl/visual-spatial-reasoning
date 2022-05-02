@@ -59,7 +59,7 @@ ViLT | 71.0 | 62.4
 ### 4 Baselines: How to run?
 
 #### Download images
-See `data/` folder's readme.
+See [`data/`](https://github.com/cambridgeltl/visual-spatial-reasoning/tree/master/data) folder's readme. Images should be saved under `data/images/`.
 
 #### Environment
 Depending on your system configuration and CUDA version, you might need two sets of environment: one environment for feature extraction (i.e, "Extract visual embeddings" section below) and one environment for all other experiments. You can install feature extraction environment by running [`feature_extraction/feature_extraction_environment.sh`](https://github.com/cambridgeltl/visual-spatial-reasoning/blob/master/feature_extraction/feature_extraction_environment.sh) (specifically, feature extraction requires detectron2==0.5, CUDA==11.1 and torch==1.8). The default configuration for running other things can be found in [`requirements.txt`](https://github.com/cambridgeltl/visual-spatial-reasoning/blob/master/requirements.txt).
