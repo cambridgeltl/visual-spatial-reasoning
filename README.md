@@ -71,36 +71,18 @@ python extract_img_features.py \
 VisualBERT feature extraction is done similarly by `cd` into `feature_extraction/visualbert`. The feature extraction codes are modified from huggingface examples [here](https://colab.research.google.com/drive/1bLGxKdldwqnMVA5x4neY7-l_8fKGWQYI?usp=sharing) (for VisualBERT) and [here](https://colab.research.google.com/drive/18TyuMfZYlgQ_nXo-tr8LCnzUaoX0KS-h?usp=sharing) (for LXMERT).
 
 #### Train
-
-VisualBERT:
+`scripts/` contain some example bash scripts for training and evaluations. For example, the following script trains LXMERT on the random split:
 ```bash
-CUDA_VISIBLE_DEVICES=2 python train.py \      
-		--img_feature_path data/vsr_data_trial/img_features \
-		--train_json_path data/vsr_data_trial/test.json \
-		--amp \
-		--output_dir "tmp/test" \
-		--checkpoint_step 10 \
-		--epoch 100 \
-		--batch_size 32 \
-		--learning_rate 2e-5
+bash scripts/lxmert_train.sh 0
 ```
-LXMERT:
-
-```
-```
-
-ViLT:
-```
-```
-
+where `0` denotes device index. Checkpoint saving address can be modified in the script.
 
 #### Evaluation
+Similarly, evaluating the obtained LXMERT model can be done by running:
 ```bash
-CUDA_VISIBLE_DEVICES=2 python eval.py \ 
-		--checkpoint_path tmp/test/checkpoint_iter_140 \
-		--img_feature_path data/vsr_data_trial/img_features \
-		--test_json_path data/vsr_data_trial/test.json
+bash scripts/lxmert_eval.sh 0
 ```
+The checkpoint address can be modified in the script.
 
 ### License
 This project is licensed under the Apache-2.0 License.
