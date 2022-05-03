@@ -4,7 +4,7 @@
   <h3 align="center">A probing benchmark for spatial undersranding of vision-language models.</h3>
   
   <p align="center">  
-    <a href="">arxiv</a>
+    <a href="https://arxiv.org/abs/2205.00363">arxiv</a>
     ·
     <a href="https://github.com/cambridgeltl/visual-spatial-reasoning/tree/master/data">dataset</a>
   </p>
