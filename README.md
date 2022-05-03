@@ -12,7 +12,7 @@
 
 ### 1 Overview
 
-The Visual Spatial Reasoning (VSR) corpus is a collection of caption-image pairs with true/false labels. Each caption describes the spatial relation of two individual objects in the image, and a vision-language model (VLM) needs to juedge whether the caption is correctly describing the image (True) or not (False). Below are a few examples.
+The Visual Spatial Reasoning (VSR) corpus is a collection of caption-image pairs with true/false labels. Each caption describes the spatial relation of two individual objects in the image, and a vision-language model (VLM) needs to judge whether the caption is correctly describing the image (True) or not (False). Below are a few examples.
 
 _The cat is behind the laptop_.  (True)   |  _The cow is ahead of the person._ (False) | _The cake is at the edge of the dining table._ (True) | _The horse is left of the person._ (False)
 :-------------------------:|:-------------------------:|:-------------------------:|:-------------------------:
@@ -29,13 +29,13 @@ Below are baselines' by-relation performances on VSR (random split).
 
 <img align="right" width="320"  src="figures/performance_by_meta_cat_random_split_v2.png"> 
 
-**_Understanding object orientation is hard._** After classifying spatial relations with meta-categories, we can clearly see that all models are at chance level for "orientation"-related relations (such as "facing", "facing away from", "parallel to", etc.).
+**_Understanding object orientation is hard._** After classifying spatial relations into meta-categories, we can clearly see that all models are at chance level for "orientation"-related relations (such as "facing", "facing away from", "parallel to", etc.).
 
 For more findings and takeways including zero-shot split performance. check out our paper!
 
 ### 2 The VSR dataset: Splits, statistics, and meta-data
 
-The VSR corpus, after validation, containing 10,119 data points with high agreement. On top of these, we create two splits (1) random split and (2) zero-shot split. For random split, we randomly splits all data points into train, development, and test sets. Zero-shot split makes sure that train, development and test sets have no overlap of concepts (i.e., if *dog* is in test set, it is not used for training and development). Below are some basic statistics of the two splits.
+The VSR corpus, after validation, contains 10,119 data points with high agreement. On top of these, we create two splits (1) random split and (2) zero-shot split. For random split, we randomly split all data points into train, development, and test sets. Zero-shot split makes sure that train, development and test sets have no overlap of concepts (i.e., if *dog* is in test set, it is not used for training and development). Below are some basic statistics of the two splits.
 
 split   |  train | dev | test | total
 :------|:--------:|:--------:|:--------:|:--------:
