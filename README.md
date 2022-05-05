@@ -88,5 +88,17 @@ Configurations such as checkpoint reading address can be modified in the script.
 
 In [`analysis_scripts/`](https://github.com/cambridgeltl/visual-spatial-reasoning/tree/master/analysis_scripts) you can checkout how to print out by-relation and by-meta-category accuracies.
 
+### Citation
+If you find VSR useful:
+```bibtex
+@article{Liu2022VisualSR,
+  title={Visual Spatial Reasoning},
+  author={Fangyu Liu and Guy Edward Toh Emerson and Nigel Collier},
+  journal={ArXiv},
+  year={2022},
+  volume={abs/2205.00363}
+}
+```
+
 ### License
 This project is licensed under the [Apache-2.0 License](https://github.com/cambridgeltl/visual-spatial-reasoning/blob/master/LICENSE).
