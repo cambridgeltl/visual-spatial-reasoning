@@ -7,6 +7,9 @@
     <a href="https://arxiv.org/abs/2205.00363">arxiv</a>
     ·
     <a href="https://github.com/cambridgeltl/visual-spatial-reasoning/tree/master/data">dataset</a>
+    ·
+    <a href="https://paperswithcode.com/sota/visual-reasoning-on-vsr">benchmark</a>
+    
   </p>
 </p>
 
