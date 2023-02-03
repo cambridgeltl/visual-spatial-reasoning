@@ -14,7 +14,7 @@
 </p>
 
 ***
-**Update**: Visual Spatial Reasoning is accepted to TACL 🥂! Stay tuned for the camera-ready version!
+**Update**: *Visual Spatial Reasoning* is accepted to [TACL](https://transacl.org/index.php/tacl) 🥂! Stay tuned for the camera-ready version!
 ***
 
 ### 1 Overview
