@@ -13,6 +13,10 @@
   </p>
 </p>
 
+***
+**Update**: Visual Spatial Reasoning is accepted to TACL 🥂! Stay tuned for the camera-ready version!
+***
+
 ### 1 Overview
 
 The Visual Spatial Reasoning (VSR) corpus is a collection of caption-image pairs with true/false labels. Each caption describes the spatial relation of two individual objects in the image, and a vision-language model (VLM) needs to judge whether the caption is correctly describing the image (True) or not (False). Below are a few examples.
