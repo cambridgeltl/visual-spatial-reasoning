@@ -16,7 +16,7 @@
 ***
 **Update [Mar 22, 2023]**: We updated our arxiv preprint with the [camera-ready version](https://arxiv.org/abs/2205.00363)) and also the dataset in this repo to be consistent with the accepted paper. If you used an earlier version of VSR, you can refer to the earlier version of the preprint ([v1](https://arxiv.org/abs/2205.00363v1)) and the earlier [snapshot](https://github.com/cambridgeltl/visual-spatial-reasoning/tree/c28c02bf4e5f629af49159618a202d8407ba5742) of this repo. <br>
 **Update [Feb 10, 2023]**: Check out [CLIP_visual-spatial-reasoning](https://github.com/Sohojoe/CLIP_visual-spatial-reasoning) by [**@Sohojoe**](https://github.com/Sohojoe) where you can find CLIP's performance on VSR. <br>
-**Update [Feb 3, 2023]**: *Visual Spatial Reasoning* is accepted to [*TACL*](https://transacl.org/index.php/tacl) 🥂! Stay tuned for the camera-ready version!<br>
+**Update [Feb 3, 2023]**: *Visual Spatial Reasoning* is accepted to [**TACL**](https://transacl.org/index.php/tacl) 🥂! Stay tuned for the camera-ready version!<br>
 ***
 
 ### 1 Overview
