@@ -53,6 +53,15 @@ zero-shot | 4,713 | 231 | 616 | 5,560
 
 Check out [`data/`](https://github.com/cambridgeltl/visual-spatial-reasoning/tree/master/data) for more details.
 
+You can also load VSR from huggingface:
+```python
+from datasets import load_dataset
+
+data_files = {"train": "train.jsonl", "dev": "dev.jsonl", "test": "test.jsonl"}
+dataset = load_dataset("cambridgeltl/vsr_random", data_files=data_files)
+```
+For the zero-shot split, simply use `cambridgeltl/vsr_random`. Note that the image files still need to be downloaded separately as suggested in [`data/`](https://github.com/cambridgeltl/visual-spatial-reasoning/tree/master/data).
+
 ### 3 Baselines: Performance
 
 We test three baselines, all supported in huggingface. They are VisualBERT [(Li et al. 2019)](https://arxiv.org/abs/1908.03557), LXMERT [(Tan and Bansal, 2019)](https://arxiv.org/abs/1908.07490) and ViLT [(Kim et al. 2021)](https://arxiv.org/abs/2102.03334).
