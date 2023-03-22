@@ -14,8 +14,8 @@
 </p>
 
 ***
+**Update [Mar 22, 2023]**: We updated our arxiv preprint with the camera-ready version ([v2](https://arxiv.org/abs/2205.00363)) and also the dataset to be consistent with the accepted paper. If you used an earlier version of VSR, you can refer to the earlier version of the preprint ([v1](https://arxiv.org/abs/2205.00363v1)) and the earlier [snapshot](https://github.com/cambridgeltl/visual-spatial-reasoning/tree/c28c02bf4e5f629af49159618a202d8407ba5742) of this repo. <br>
 **Update [Feb 10, 2023]**: Check out [CLIP_visual-spatial-reasoning](https://github.com/Sohojoe/CLIP_visual-spatial-reasoning) by [**@Sohojoe**](https://github.com/Sohojoe) where you can find CLIP's performance on VSR. <br>
-**Update [Feb 10, 2023]**: We updated our arxiv preprint with the accepted version ([v2](https://arxiv.org/abs/2205.00363)). Note that data currently held in this repo corresponds to the earlier [v1](https://arxiv.org/abs/2205.00363v1) preprint. We will update this repo with the latest data that received additional rounds of validation later. <br>
 **Update [Feb 3, 2023]**: *Visual Spatial Reasoning* is accepted to [TACL](https://transacl.org/index.php/tacl) 🥂! Stay tuned for the camera-ready version!<br>
 ***
 
@@ -44,12 +44,12 @@ For more findings and takeways including zero-shot split performance. check out 
 
 ### 2 The VSR dataset: Splits, statistics, and meta-data
 
-The VSR corpus, after validation, contains 10,119 data points with high agreement. On top of these, we create two splits (1) random split and (2) zero-shot split. For random split, we randomly split all data points into train, development, and test sets. Zero-shot split makes sure that train, development and test sets have no overlap of concepts (i.e., if *dog* is in test set, it is not used for training and development). Below are some basic statistics of the two splits.
+The VSR corpus, after validation, contains 10,972 data points with high agreement. On top of these, we create two splits (1) random split and (2) zero-shot split. For random split, we randomly split all data points into train, development, and test sets. Zero-shot split makes sure that train, development and test sets have no overlap of concepts (i.e., if *dog* is in test set, it is not used for training and development). Below are some basic statistics of the two splits.
 
 split   |  train | dev | test | total
 :------|:--------:|:--------:|:--------:|:--------:
-random | 7,083 | 1,012 | 2,024 | 10,119 
-zero-shot | 5,440 | 259 | 731 | 6,430
+random | 7,680 | 1,097 | 2,195 | 10,972
+zero-shot | 4,713 | 231 | 616 | 5,560
 
 Check out [`data/`](https://github.com/cambridgeltl/visual-spatial-reasoning/tree/master/data) for more details.
 
@@ -60,10 +60,13 @@ We test three baselines, all supported in huggingface. They are VisualBERT [(Li 
 model   |  random split | zero-shot
 :-------------|:-------------:|:-------------:
 *human* | *95.4* | *95.4* 
-VisualBERT | 57.4 | 54.0
-LXMERT | **72.5** | **63.2**
-ViLT | 71.0 | 62.4
+CLIP (frozen) | 56.0 | 54.5  
+CLIP (finetuned)* | 65.1 |  -
+VisualBERT | 55.2 | 51.0
+ViLT | 69.3 | **63.0**
+LXMERT | **70.1** | 61.2
 
+*CLIP (finetuned) result is from [here](https://github.com/Sohojoe/CLIP_visual-spatial-reasoning#--fine-tuning-results).
 
 ### 4 Baselines: How to run?
 
@@ -71,7 +74,7 @@ ViLT | 71.0 | 62.4
 See [`data/`](https://github.com/cambridgeltl/visual-spatial-reasoning/tree/master/data) folder's readme. Images should be saved under `data/images/`.
 
 #### Environment
-Depending on your system configuration and CUDA version, you might need two sets of environment: one environment for feature extraction (i.e, "Extract visual embeddings" section below) and one environment for all other experiments. You can install feature extraction environment by running [`feature_extraction/feature_extraction_environment.sh`](https://github.com/cambridgeltl/visual-spatial-reasoning/blob/master/feature_extraction/feature_extraction_environment.sh) (specifically, feature extraction requires detectron2==0.5, CUDA==11.1 and torch==1.8). The default configuration for running other things can be found in [`requirements.txt`](https://github.com/cambridgeltl/visual-spatial-reasoning/blob/master/requirements.txt).
+Depending on your system configuration and CUDA version, you might need two sets of environment: one environment for feature extraction (i.e, "Extract visual embeddings" section below) and one environment for all other experiments. You can install feature extraction environment by running [`feature_extraction/feature_extraction_environment.sh`](https://github.com/cambridgeltl/visual-spatial-reasoning/blob/master/feature_extraction/feature_extraction_environment.sh) (specifically, feature extraction requires `detectron2==0.5`, `CUDA==11.1` and `torch==1.8`). The default configuration for running other things can be found in [`requirements.txt`](https://github.com/cambridgeltl/visual-spatial-reasoning/blob/master/requirements.txt).
 
 #### Extract visual embeddings
 For VisualBERT and LXMERT, we need to first extract visual embeddings using pre-trained object detectors. This can be done through
@@ -103,9 +106,8 @@ If you find VSR useful:
 @article{Liu2022VisualSR,
   title={Visual Spatial Reasoning},
   author={Fangyu Liu and Guy Edward Toh Emerson and Nigel Collier},
-  journal={ArXiv},
-  year={2022},
-  volume={abs/2205.00363}
+  journal={Transactions of the Association for Computational Linguistics},
+  year={2023},
 }
 ```
 
