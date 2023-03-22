@@ -14,7 +14,7 @@
 </p>
 
 ***
-**Update [Mar 22, 2023]**: We updated our arxiv preprint with the camera-ready version ([v2](https://arxiv.org/abs/2205.00363)) and also the dataset to be consistent with the accepted paper. If you used an earlier version of VSR, you can refer to the earlier version of the preprint ([v1](https://arxiv.org/abs/2205.00363v1)) and the earlier [snapshot](https://github.com/cambridgeltl/visual-spatial-reasoning/tree/c28c02bf4e5f629af49159618a202d8407ba5742) of this repo. <br>
+**Update [Mar 22, 2023]**: We updated our arxiv preprint with the [camera-ready version](https://arxiv.org/abs/2205.00363)) and also the dataset in this repo to be consistent with the accepted paper. If you used an earlier version of VSR, you can refer to the earlier version of the preprint ([v1](https://arxiv.org/abs/2205.00363v1)) and the earlier [snapshot](https://github.com/cambridgeltl/visual-spatial-reasoning/tree/c28c02bf4e5f629af49159618a202d8407ba5742) of this repo. <br>
 **Update [Feb 10, 2023]**: Check out [CLIP_visual-spatial-reasoning](https://github.com/Sohojoe/CLIP_visual-spatial-reasoning) by [**@Sohojoe**](https://github.com/Sohojoe) where you can find CLIP's performance on VSR. <br>
 **Update [Feb 3, 2023]**: *Visual Spatial Reasoning* is accepted to [TACL](https://transacl.org/index.php/tacl) 🥂! Stay tuned for the camera-ready version!<br>
 ***
@@ -33,10 +33,10 @@ The VSR corpus focuses specifically on spatial relations so we can have accurate
 
 #### 1.2 What have we found?
 Below are baselines' by-relation performances on VSR (random split). 
-![](figures/performance_by_relation_random_split_v2.png)
+![](figures/performance_by_relation_random_split_v4.png)
 **_More data != better performance._** The relations are sorted by frequencies from left to right. The VLMs' by-relation performances have little correlation with relation frequency, meaning that more training data do not necessarily lead to better performance.
 
-<img align="right" width="320"  src="figures/performance_by_meta_cat_random_split_v2.png"> 
+<img align="right" width="320"  src="figures/performance_by_meta_cat_random_split_v4.png"> 
 
 **_Understanding object orientation is hard._** After classifying spatial relations into meta-categories, we can clearly see that all models are at chance level for "orientation"-related relations (such as "facing", "facing away from", "parallel to", etc.).
 
