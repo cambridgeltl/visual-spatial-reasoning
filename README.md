@@ -64,7 +64,7 @@ For the zero-shot split, simply use `cambridgeltl/vsr_random`. Note that the ima
 
 ### 3 Baselines: Performance
 
-We test three baselines, all supported in huggingface. They are VisualBERT [(Li et al. 2019)](https://arxiv.org/abs/1908.03557), LXMERT [(Tan and Bansal, 2019)](https://arxiv.org/abs/1908.07490) and ViLT [(Kim et al. 2021)](https://arxiv.org/abs/2102.03334).
+We test four baselines, all supported in huggingface. They are VisualBERT [(Li et al. 2019)](https://arxiv.org/abs/1908.03557), LXMERT [(Tan and Bansal, 2019)](https://arxiv.org/abs/1908.07490), ViLT [(Kim et al. 2021)](https://arxiv.org/abs/2102.03334), and CLIP [(Radford et al. 2021)](https://arxiv.org/abs/2103.00020).
 
 model   |  random split | zero-shot
 :-------------|:-------------:|:-------------:
