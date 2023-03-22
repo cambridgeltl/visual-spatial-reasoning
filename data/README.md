@@ -37,6 +37,15 @@ splits
 
 [`splits/random`](https://github.com/cambridgeltl/visual-spatial-reasoning/tree/master/data/splits/random) and [`splits/zeroshot`](https://github.com/cambridgeltl/visual-spatial-reasoning/tree/master/data/splits/zeroshot) contain the train and zeroshot splits data in `jsonl` format. [`splits/create_random_splits.py`](https://github.com/cambridgeltl/visual-spatial-reasoning/tree/master/data/splits/create_random_splits.py) and [`splits/create_zeroshot_splits.py`](https://github.com/cambridgeltl/visual-spatial-reasoning/tree/master/data/splits/create_zeroshot_splits.py) are the scripts used to create them. [`splits/create_sample_efficiency_train_splits.py`](https://github.com/cambridgeltl/visual-spatial-reasoning/tree/master/data/splits/create_sample_efficiency_train_splits.py) is for creating sample efficiency training files (100-shot, 10\%, 25\%, 50\%, 75\% of all training data). Read the code and you will see that they are quite self-explanatory.
 
+You could also access the jsonl file through Huggingface datasets:
+```python
+from datasets import load_dataset
+
+data_files = {"train": "train.jsonl", "dev": "dev.jsonl", "test": "test.jsonl"}
+vsr_dataset_random = load_dataset("cambridgeltl/vsr_random", data_files=data_files)
+vsr_dataset_zeroshot= load_dataset("cambridgeltl/vsr_zeroshot", data_files=data_files)
+```
+
 ### Format of the data
 Each `jsonl` file is of the following format:
 ```json
