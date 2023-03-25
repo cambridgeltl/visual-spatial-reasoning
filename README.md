@@ -53,7 +53,7 @@ zero-shot | 4,713 | 231 | 616 | 5,560
 
 Check out [`data/`](https://github.com/cambridgeltl/visual-spatial-reasoning/tree/master/data) for more details.
 
-You can also load VSR from huggingface [[🤗vsr_random]](https://huggingface.co/datasets/cambridgeltl/vsr_random) & [[🤗vsr_zeroshot]](https://huggingface.co/datasets/cambridgeltl/vsr_random):
+You can also load VSR from huggingface [[🤗vsr_random]](https://huggingface.co/datasets/cambridgeltl/vsr_random) & [[🤗vsr_zeroshot]](https://huggingface.co/datasets/cambridgeltl/vsr_zeroshot):
 ```python
 from datasets import load_dataset
 
